@@ -73,21 +73,21 @@ function StickyBottomBar() {
           <div className="absolute bottom-full left-0 right-0 h-8 bg-gradient-to-t from-dark to-transparent pointer-events-none" />
 
           <div className="bg-black/70 backdrop-blur-md border-t border-white/10 px-4 py-4 safe-bottom">
-            <div className="max-w-lg mx-auto flex items-center gap-3">
+            <div className="max-w-lg mx-auto flex flex-row items-center gap-2">
               {/* Contact Button */}
               <motion.a
                 href="tel:010-8470-8730"
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-12 h-12 rounded-xl bg-dark-elevated border border-dark-border hover:border-neon/30 transition-colors"
+                className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-dark-elevated border border-dark-border hover:border-neon/30 transition-colors"
               >
-                <Phone className="w-5 h-5 text-text-secondary" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary" />
               </motion.a>
 
               {/* Share Button */}
               <motion.button
                 onClick={handleShare}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-12 h-12 rounded-xl bg-dark-elevated border border-dark-border hover:border-neon/30 transition-colors"
+                className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-dark-elevated border border-dark-border hover:border-neon/30 transition-colors"
               >
                 <AnimatePresence mode="wait">
                   {copied ? (
@@ -97,7 +97,7 @@ function StickyBottomBar() {
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
                     >
-                      <Check className="w-5 h-5 text-success" />
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -106,7 +106,7 @@ function StickyBottomBar() {
                       animate={{ scale: 1 }}
                       exit={{ scale: 0 }}
                     >
-                      <Share2 className="w-5 h-5 text-text-secondary" />
+                      <Share2 className="w-4 h-4 sm:w-5 sm:h-5 text-text-secondary" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -121,12 +121,12 @@ function StickyBottomBar() {
                 whileTap={{ scale: 0.98 }}
                 className="flex-1 group relative overflow-hidden rounded-xl shadow-lg shadow-orange-500/50 animate-pulse-glow"
               >
-                <div className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-4 px-6 rounded-xl">
-                  <span>지독해 합류하기 🚀</span>
-                  <span className="flex items-center gap-1.5 text-sm bg-white/20 px-2.5 py-1 rounded-lg font-bold">
+                <div className="relative flex flex-row items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold text-sm sm:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl">
+                  <span className="whitespace-nowrap">합류하기 🚀</span>
+                  <span className="whitespace-nowrap flex items-center text-xs sm:text-sm bg-white/20 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg font-bold">
                     D-{daysLeft}
                   </span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.a>
             </div>
