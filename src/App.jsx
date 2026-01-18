@@ -5,6 +5,7 @@ import RecruitmentRoles from './components/RecruitmentRoles'
 import LeadersLetter from './components/LeadersLetter'
 import Benefits from './components/Benefits'
 import FAQ from './components/FAQ'
+import Epilogue from './components/Epilogue'
 import StickyBottomBar from './components/StickyBottomBar'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <LeadersLetter />
       <Benefits />
       <FAQ />
+      <Epilogue />
       <StickyBottomBar />
     </div>
   )

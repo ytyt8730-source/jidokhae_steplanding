@@ -89,7 +89,7 @@ function Hero() {
             href="#roles"
             containerClassName="inline-block"
           >
-            <span>역할 알아보기</span>
+            <span>함께 성장하기</span>
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}

@@ -22,6 +22,7 @@
   --color-warning: #f59e0b;
 
   --font-family-sans: 'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif;
+  --font-family-serif: 'Noto Serif KR', Georgia, 'Times New Roman', serif;
 }
 
 @layer base {
