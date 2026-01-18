@@ -74,31 +74,46 @@ export function InfiniteMovingCards({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="w-[300px] sm:w-[350px] max-w-full relative rounded-2xl flex-shrink-0 group"
+            className={cn(
+              'max-w-full relative rounded-2xl flex-shrink-0 group',
+              item.type === 'image' ? 'w-[200px] sm:w-[240px]' : 'w-[300px] sm:w-[350px]'
+            )}
           >
-            <div className="relative h-full">
-              {/* Glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-neon/30 to-neon-light/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+            {item.type === 'image' ? (
+              /* Photo Card */
+              <div className="relative h-full overflow-hidden rounded-2xl">
+                <img
+                  src={item.src}
+                  alt=""
+                  className="w-full h-[140px] sm:h-[160px] object-cover rounded-2xl brightness-75 group-hover:brightness-90 transition-all duration-300"
+                />
+              </div>
+            ) : (
+              /* Quote Card */
+              <div className="relative h-full">
+                {/* Glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-neon/30 to-neon-light/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
 
-              {/* Card */}
-              <div className="relative h-full bg-dark-card border border-dark-border rounded-2xl px-6 py-5 group-hover:border-neon/30 transition-colors">
-                {/* Quote */}
-                <p className="text-text-secondary leading-relaxed text-[15px] mb-4">
-                  "{item.quote}"
-                </p>
+                {/* Card */}
+                <div className="relative h-full bg-dark-card border border-dark-border rounded-2xl px-6 py-5 group-hover:border-neon/30 transition-colors">
+                  {/* Quote */}
+                  <p className="text-text-secondary leading-relaxed text-[15px] mb-4">
+                    "{item.quote}"
+                  </p>
 
-                {/* Author */}
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-dark-elevated flex items-center justify-center text-sm">
-                    {item.emoji}
-                  </div>
-                  <div>
-                    <p className="text-white text-sm font-medium">{item.name}</p>
-                    <p className="text-text-muted text-xs">{item.role}</p>
+                  {/* Author */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-dark-elevated flex items-center justify-center text-sm">
+                      {item.emoji}
+                    </div>
+                    <div>
+                      <p className="text-white text-sm font-medium">{item.name}</p>
+                      <p className="text-text-muted text-xs">{item.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </li>
         ))}
       </ul>

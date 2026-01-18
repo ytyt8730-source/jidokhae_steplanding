@@ -72,7 +72,7 @@ function StickyBottomBar() {
           {/* Gradient fade */}
           <div className="absolute bottom-full left-0 right-0 h-8 bg-gradient-to-t from-dark to-transparent pointer-events-none" />
 
-          <div className="bg-black/80 backdrop-blur-xl border-t border-white/10 px-4 py-4 safe-bottom">
+          <div className="bg-black/70 backdrop-blur-md border-t border-white/10 px-4 py-4 safe-bottom">
             <div className="max-w-lg mx-auto flex items-center gap-3">
               {/* Contact Button */}
               <motion.a
@@ -122,7 +122,7 @@ function StickyBottomBar() {
                 className="flex-1 group relative overflow-hidden rounded-xl shadow-lg shadow-orange-500/50 animate-pulse-glow"
               >
                 <div className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-4 px-6 rounded-xl">
-                  <span>지독해 합류하기</span>
+                  <span>지독해 합류하기 🚀</span>
                   <span className="flex items-center gap-1.5 text-sm bg-white/20 px-2.5 py-1 rounded-lg font-bold">
                     D-{daysLeft}
                   </span>

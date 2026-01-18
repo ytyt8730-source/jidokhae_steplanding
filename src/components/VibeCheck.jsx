@@ -2,56 +2,80 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 
-const reviews = [
+const textReviews = [
   {
+    type: 'quote',
     quote: '혼자 읽을 땐 몰랐던 문장을 발견했어요.',
     name: '새싹 멤버',
     role: '6개월차',
     emoji: '📖',
   },
   {
+    type: 'quote',
     quote: '매주 일요일이 기다려지는 이유!',
     name: '열혈 멤버',
     role: '1년차',
     emoji: '☀️',
   },
   {
+    type: 'quote',
     quote: '지독해 덕분에 1년에 50권을 읽었어요.',
     name: '독서광 멤버',
     role: '2년차',
     emoji: '🎯',
   },
   {
+    type: 'quote',
     quote: '좋은 사람들과 나누는 대화가 내 영감의 원천.',
     name: '열혈 멤버',
     role: '1년차',
     emoji: '💡',
   },
   {
+    type: 'quote',
     quote: '책 읽는 습관이 삶을 바꿨어요.',
     name: '새싹 멤버',
     role: '8개월차',
     emoji: '✨',
   },
   {
+    type: 'quote',
     quote: '여기서 만난 사람들이 진짜 보물이에요.',
     name: '고인물 멤버',
     role: '3년차',
     emoji: '💎',
   },
   {
+    type: 'quote',
     quote: '모임 후 느끼는 뿌듯함이 중독성 있어요.',
     name: '새싹 멤버',
     role: '4개월차',
     emoji: '🔥',
   },
   {
+    type: 'quote',
     quote: '같은 책도 다르게 읽는 게 신기해요.',
     name: '열혈 멤버',
     role: '1년차',
     emoji: '🌈',
   },
 ]
+
+const photoCards = [
+  { type: 'image', src: '/images/review-1.jpg' },
+  { type: 'image', src: '/images/review-2.jpg' },
+  { type: 'image', src: '/images/review-3.jpg' },
+  { type: 'image', src: '/images/review-4.jpg' },
+  { type: 'image', src: '/images/review-5.jpg' },
+  { type: 'image', src: '/images/review-6.jpg' },
+  { type: 'image', src: '/images/review-7.jpg' },
+  { type: 'image', src: '/images/review-8.jpg' },
+]
+
+// Interleave text reviews with photos
+const reviews = textReviews.flatMap((review, idx) =>
+  idx < photoCards.length ? [review, photoCards[idx]] : [review]
+)
 
 function VibeCheck() {
   const sectionRef = useRef(null)

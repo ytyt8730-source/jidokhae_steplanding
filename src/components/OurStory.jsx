@@ -26,6 +26,15 @@ function OurStory() {
 
   return (
     <section ref={sectionRef} className="relative py-24 sm:py-32 bg-dark overflow-hidden">
+      {/* Background Texture Image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="/images/stats-bg.jpg"
+          alt=""
+          className="w-full h-full object-cover grayscale opacity-20"
+        />
+      </div>
+
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-neon/5 rounded-full blur-[120px] pointer-events-none" />
 

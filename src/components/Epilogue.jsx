@@ -85,6 +85,31 @@ function Epilogue() {
         >
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
         </motion.div>
+
+        {/* Final CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="mt-16 flex justify-center"
+        >
+          <motion.a
+            href="https://forms.gle/WdTMC4QseoCPmP288"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="relative group"
+          >
+            {/* Pulsing glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 animate-pulse transition-opacity" />
+
+            {/* Button */}
+            <div className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-lg py-5 px-10 rounded-xl shadow-2xl shadow-orange-500/30">
+              <span>지독해 합류하기 🚀</span>
+            </div>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   )

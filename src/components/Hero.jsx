@@ -8,6 +8,18 @@ import CountdownTimer from './CountdownTimer'
 function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-dark">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.jpg"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Heavy Dark Overlay for readability */}
+      <div className="absolute inset-0 bg-black/80" />
+
       {/* Sparkles Background */}
       <div className="absolute inset-0">
         <SparklesCore
@@ -21,7 +33,7 @@ function Hero() {
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-transparent to-dark pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark to-transparent pointer-events-none" />
 
       {/* Radial Glow */}
@@ -86,17 +98,12 @@ function Hero() {
         >
           <GlowingButton
             as="a"
-            href="#roles"
+            href="https://forms.gle/WdTMC4QseoCPmP288"
+            target="_blank"
+            rel="noopener noreferrer"
             containerClassName="inline-block"
           >
-            <span>함께 성장하기</span>
-            <motion.span
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="text-xl"
-            >
-              →
-            </motion.span>
+            <span>지독해 합류하기 🚀</span>
           </GlowingButton>
         </motion.div>
       </div>
