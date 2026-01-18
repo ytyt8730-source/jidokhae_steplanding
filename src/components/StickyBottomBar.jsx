@@ -37,7 +37,7 @@ function StickyBottomBar() {
 
   async function handleShare() {
     const shareData = {
-      title: '지독해 2026 스텝 모집',
+      title: '지독해 2026 스탭 모집',
       text: '책으로 연결되는 곳, 지독해 운영진에 도전하세요!',
       url: window.location.href,
     }

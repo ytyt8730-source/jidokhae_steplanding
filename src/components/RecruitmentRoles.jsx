@@ -6,7 +6,7 @@ import { WobbleCard } from './ui/WobbleCard'
 const roles = [
   {
     id: 'organizer',
-    title: '운영 스텝',
+    title: '진행 스탭',
     subtitle: 'Organizer',
     icon: ClipboardCheck,
     copy: '어차피 매주 나오는 모임, 혜택받고 다니세요.',
@@ -19,7 +19,7 @@ const roles = [
   },
   {
     id: 'questioner',
-    title: '기획 스텝 · 토론',
+    title: '기획 스탭 · 토론',
     subtitle: 'Questioner',
     icon: Lightbulb,
     copy: '나라면 이런 질문을 던졌을 텐데!',
@@ -32,7 +32,7 @@ const roles = [
   },
   {
     id: 'storyteller',
-    title: '기획 스텝 · 홍보',
+    title: '기획 스탭 · 홍보',
     subtitle: 'Storyteller',
     icon: Megaphone,
     copy: '지독해 진짜 좋은데, 왜 모르지?',

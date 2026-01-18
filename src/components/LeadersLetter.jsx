@@ -6,7 +6,7 @@ const leaders = [
   {
     id: 'doban',
     name: '도반',
-    role: 'Progressing Leader',
+    role: 'Performing Leader',
     emoji: '🐻',
     message: '주말에는 연락 안하는 사람이 좋습니다~~^^ 그만큼 부담 갖지 않으셔도 돼용~ 제가 든든하게 받쳐드릴게용~ >_^',
   },
