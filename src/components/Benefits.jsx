@@ -145,7 +145,7 @@ function Benefits() {
             Benefits
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            스텝이 되면?
+            스탭이 되면?
           </h2>
           <p className="text-text-secondary text-lg max-w-md mx-auto">
             함께하는 분들께 드리는 특별한 혜택

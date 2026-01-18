@@ -7,7 +7,7 @@ const roles = [
   {
     id: 'organizer',
     title: '진행 스탭',
-    subtitle: 'Organizer',
+    subtitle: 'Performer',
     icon: ClipboardCheck,
     copy: '어차피 매주 나오는 모임, 혜택받고 다니세요.',
     longCopy: '출석 체크부터 공간 세팅까지. 모임이 매끄럽게 흘러가도록 뒤에서 받쳐주는 든든한 지원군.',
