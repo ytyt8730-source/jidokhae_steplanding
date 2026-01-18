@@ -66,7 +66,7 @@ function Hero() {
         >
           <TextGenerateEffect
             words="이미 지독해를 즐기고 있다면"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight break-keep"
             duration={0.4}
           />
         </motion.div>

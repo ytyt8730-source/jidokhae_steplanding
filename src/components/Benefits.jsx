@@ -106,8 +106,8 @@ function BenefitCard({ benefit, isOpen, onToggle, index, isInView }) {
                         <span className="text-gray-300 text-sm leading-relaxed">{detail}</span>
                       ) : (
                         <div className="text-sm">
-                          <span className="text-neon font-medium">{detail.label}:</span>{' '}
-                          <span className="text-gray-300">{detail.value}</span>
+                          <span className="text-gray-300">{detail.label}:</span>{' '}
+                          <span className="text-orange-400 font-bold">{detail.value}</span>
                         </div>
                       )}
                     </li>
