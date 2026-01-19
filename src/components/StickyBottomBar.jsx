@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Share2, Check, ArrowRight } from 'lucide-react'
-
-const TARGET_DATE = new Date('2026-01-25T23:59:59+09:00').getTime()
-const GOOGLE_FORM_URL = 'https://forms.gle/WdTMC4QseoCPmP288'
+import { TARGET_DATE, GOOGLE_FORM_URL, CONTACT_PHONE } from '../lib/constants'
 
 function StickyBottomBar() {
   const [daysLeft, setDaysLeft] = useState(0)
+  const [isExpired, setIsExpired] = useState(false)
   const [copied, setCopied] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -14,13 +13,26 @@ function StickyBottomBar() {
     function calculateDays() {
       const now = new Date().getTime()
       const difference = TARGET_DATE - now
-      return Math.max(0, Math.ceil(difference / (1000 * 60 * 60 * 24)))
+
+      if (difference <= 0) {
+        return { days: 0, expired: true }
+      }
+
+      // Math.floor to match Hero countdown exactly
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        expired: false
+      }
     }
 
-    setDaysLeft(calculateDays())
+    const result = calculateDays()
+    setDaysLeft(result.days)
+    setIsExpired(result.expired)
 
     const timer = setInterval(() => {
-      setDaysLeft(calculateDays())
+      const result = calculateDays()
+      setDaysLeft(result.days)
+      setIsExpired(result.expired)
     }, 60000)
 
     const handleScroll = () => {
@@ -76,7 +88,7 @@ function StickyBottomBar() {
             <div className="max-w-lg mx-auto flex flex-row items-center gap-2">
               {/* Contact Button */}
               <motion.a
-                href="tel:010-8470-8730"
+                href={`tel:${CONTACT_PHONE}`}
                 whileTap={{ scale: 0.95 }}
                 className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-dark-elevated border border-dark-border hover:border-neon/30 transition-colors"
               >
@@ -124,7 +136,7 @@ function StickyBottomBar() {
                 <div className="relative flex flex-row items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold text-sm sm:text-base py-3 sm:py-4 px-3 sm:px-6 rounded-xl">
                   <span className="whitespace-nowrap">합류하기 🚀</span>
                   <span className="whitespace-nowrap flex items-center text-xs sm:text-sm bg-white/20 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg font-bold">
-                    D-{daysLeft}
+                    {isExpired ? 'Ended' : daysLeft === 0 ? 'D-Day' : `D-${daysLeft}`}
                   </span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </div>

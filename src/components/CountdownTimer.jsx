@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const TARGET_DATE = new Date('2026-01-25T23:59:59+09:00').getTime()
+import { TARGET_DATE } from '../lib/constants'
 
 function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
