@@ -9,7 +9,7 @@ const TEAM_MEMBERS = [
     role: 'Leader',
     image: '/team/danmuji.jpg', // 실제 이미지 경로
     focusPosition: 'center', // center, top, bottom
-    message: '지독해 모임에서 누군가에게 따뜻한 미소를 지어주신 적이 있나요? 그렇다면 충분합니다. 우리는 바로 \'당신\'을 기다리고 있습니다.',
+    message: '혹시 지독해에서 누군가에게 따뜻한 미소를 지어주신 적이 있나요?! 우리는 바로 \'당신\'을 기다리고 있습니다.',
   },
   {
     id: 'doban',
@@ -25,7 +25,7 @@ const TEAM_MEMBERS = [
     role: 'Planning Lead',
     image: '/team/wowa.jpg',
     focusPosition: 'center',
-    message: '새로운 시도를 좋아하시는 분 환영하구요, 함께한 모임의 흔적들을 기록하실 분을 찾아요! 우리가 나눈 추억을 기록하다보면, 뭉클하기도 뿌듯하기도 하답니다. 저랑 쿵짝 맞춰서 재밌는 판 벌여봐요.',
+    message: '함께한 모임의 흔적들을 기록하실 분을 찾아요! 우리가 나눈 추억을 기록하다보면, 뭉클하기도 뿌듯하기도 하답니다. 저랑 쿵짝 맞춰서 재밌는 판 벌여봐요.',
   },
   {
     id: 'danggeun',
