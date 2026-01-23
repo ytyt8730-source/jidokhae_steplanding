@@ -25,7 +25,7 @@ const TEAM_MEMBERS = [
     role: 'Planning Lead',
     image: '/team/wowa.jpg',
     focusPosition: 'center',
-    message: '함께한 모임의 흔적들을 기록하실 분을 찾아요! 우리가 나눈 추억을 기록하다보면, 뭉클하기도 뿌듯하기도 하답니다. 저랑 쿵짝 맞춰서 재밌는 판 벌여봐요.',
+    message: '함께한 모임의 흔적들을 기록하실 분을 찾아요! 우리가 나눈 추억을 기록하다보면, 뭉클하기도 뿌듯하기도 하답니다. 이 순간을 함께하며 추억 만큼의 마음을 나눌 사람을 찾아요!.',
   },
   {
     id: 'danggeun',
